@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -46,4 +46,13 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  'get /players': 'playerController.getAll',
+  'get /players/:id': 'playerCtrl.getOne',
+  'post /players':  'playerCtrl.create',
+  'delete /players/:id':  'playerCtrl.delete',
+
+
+  'get /monsters/:id': 'monsterCtrl.get',
+  'post /monsters':  'monsterCtrl.create',
+  'delete /monsters/:id':  'monsterCtrl.delete'
 };

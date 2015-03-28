@@ -11,7 +11,18 @@ var monsterController = {
     );
   },
 
-  create: function(){
+  
+  getAll: function(req, res){
+    monsterr.find().then(function (monster){
+      res.status(200).send(monster);
+    },
+      function (error){
+        res.status(404).send({message: "Player not found"});
+      }
+    );
+  },
+
+  create: function(req, res){
     var monsterData = req.body;
     monster.create(monsterData).then(function(monster){
       res.status(200).send({message: "woot monster is created !", monster: monster });
@@ -21,7 +32,7 @@ var monsterController = {
     });
   },
 
-  delete: function(){
+  delete: function(req, res){
     var monsterId = req.params('id');
     monster.delete(monsterId).then(function (){
       res.status(200).send({message: "monster deleted !"});

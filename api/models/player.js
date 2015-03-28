@@ -1,6 +1,9 @@
 module.exports = {
   attributes: {
-    pv: { type: 'integer', required: true, unique: true} 
+    name:{type: 'string'},
+    life: { type: 'integer', required: true, defaultsTo: 5} ,
+    posX: {type:'integer'},
+    posX: {type:'integer'},
   }
 
 };

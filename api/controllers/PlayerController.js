@@ -13,7 +13,6 @@ var PlayerController = {
 
 
   getAll: function(req, res){
-    console.log("getALL Q")
     player.find().then(function (player){
       res.status(200).send(player);
     },
@@ -24,7 +23,7 @@ var PlayerController = {
   },
 
 
-  create: function(){
+  create: function(req, res){
     var playerData = req.body;
     player.create(playerData).then(function(player){
       res.status(200).send({message: "woot player is created !", player: player });
@@ -34,7 +33,7 @@ var PlayerController = {
       });
   },
 
-  delete: function(){
+  delete: function(req, res){
     var playerId = req.params('id');
     player.delete(playerId).then(function (){
       res.status(200).send({message: "Player deleted !"});

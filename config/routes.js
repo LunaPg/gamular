@@ -46,15 +46,17 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  'get /players': 'playerController.getAll',
-  'get /players/:id': 'PlayerController.getOne',
-  'post /players':  'PlayerController.create',
-  'delete /players/:id':  'PlayerController.delete',
+  'get /api/players': 'playerController.getAll',
+  'get /api/players/:id': 'PlayerController.getOne',
+  'put /api/players/:id': 'PlayerController.updatePos',
+  'post /api/players':  'PlayerController.create',
+  'delete /api/players/:id':  'PlayerController.delete',
 
 
 
-  'get /monsters': 'MonsterController.getAll',
-  'get /monsters/:id': 'MonsterController.get',
-  'post /monsters':  'MonsterController.create',
-  'delete /monsters/:id':  'MonsterController.delete'
+  'get /api/monsters': 'MonsterController.getAll',
+  'get /api/monsters/:id': 'MonsterController.getOne',
+  'post /api/monsters':  'MonsterController.create',
+  'delete /api/monsters/:id':  'MonsterController.delete',
+  'put /api/monsters/:id': 'MonsterController.updatePos'
 };

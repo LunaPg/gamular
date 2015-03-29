@@ -58,5 +58,5 @@ module.exports.routes = {
   'get /api/monsters/:id': 'MonsterController.getOne',
   'post /api/monsters':  'MonsterController.create',
   'delete /api/monsters/:id':  'MonsterController.delete',
-  'put /api/monsters/:id': 'MonsterController.updatePos'
+  'put /api/monsters/:id': 'MonsterController.update'
 };
